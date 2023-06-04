@@ -1,11 +1,7 @@
 name: Run Rest Assured Test Cases
 on:
   push:
-    branches:
-      - master
-  pull_request:
-    branches:
-      - master
+    branches: ["master"]
 
 jobs:
 test:
