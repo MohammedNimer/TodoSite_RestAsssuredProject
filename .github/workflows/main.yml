@@ -12,7 +12,7 @@ steps:
 
 with:
 distribution: 'temurin'
-java-version:"17"
+java-version: '17'
 
 cache: maven
 = run: mvn clean test
