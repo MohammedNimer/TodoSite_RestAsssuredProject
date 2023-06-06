@@ -1,18 +1,19 @@
-#file: noinspection YAMLSchemaValidation
+# file: .github/workflows/rest-assured.yml
 name: Run Rest Assured Test Cases
 on:
   push:
     branches: ["master"]
 
 jobs:
- test:
-   runs-on: macos-latest
- steps:
-    - uses: actions/checkout@v3
-    - uses: actions/setup-java@v3
-      with:
-      java-version: '17'
-      distribution: 'temurin'
-      cache: maven
+  test:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-java@v3
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+          cache: maven
 
-    - run: mvn clean test
+      - run: mvn clean test
+
